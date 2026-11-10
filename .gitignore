@@ -1,0 +1,12 @@
+# Dependências do Composer
+vendor/
+
+# Variáveis de ambiente (senhas, chaves). Versione apenas o .env.example
+.env
+
+# IDE / sistema
+.idea/
+.DS_Store
+
+# Docker / logs
+*.log
