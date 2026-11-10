@@ -5,8 +5,8 @@ Padrões para tudo continuar organizado conforme o repositório cresce.
 ## Pastas
 
 - Pastas principais com inicial maiúscula: `Estudos/`, `Exercicios/`, `Projetos/` (sem acento, para evitar problemas no terminal e no Git).
-- Subpastas numeradas com dois dígitos + `kebab-case`: `01-fundamentos/`, `02-estruturas-de-controle/`.
-- **O mesmo número de módulo em `Estudos/` e `Exercicios/`** significa o mesmo assunto.
+- Subpastas numeradas com dois dígitos + `kebab-case`: `01-variaveis/`, `02-condicionais/`.
+- **A mesma pasta de tópico em `Estudos/` e `Exercicios/`** significa o mesmo assunto.
 - **Toda pasta tem um `README.md`** explicando o que tem nela.
 
 ## Arquivos
@@ -14,7 +14,7 @@ Padrões para tudo continuar organizado conforme o repositório cresce.
 | Onde | Padrão | Exemplo |
 |------|--------|---------|
 | Estudos | `kebab-case.php` com o nome do assunto | `string-numerica.php` |
-| Exercícios | `NN-kebab-case.php` | `01-media-de-notas.php` |
+| Exercícios | `PascalCase.php` com o nome do exercício | `MediaNotas.php` |
 | Classes (a partir da fase OO) | `PascalCase.php`, um por classe (PSR-4) | `src/Modelo/Filme.php` |
 
 ## Código
@@ -34,8 +34,8 @@ Padrões para tudo continuar organizado conforme o repositório cresce.
 Formato: `tipo(escopo): descrição`
 
 ```
-estudo(fundamentos): adiciona exemplos de $argv
-exercicio(fundamentos): resolve exercício 01 - média de notas
+estudo(variaveis): adiciona exemplos de $argv
+exercicio(variaveis): resolve exercício 01 - média de notas
 projeto(cli): calcula inclusão no plano com operadores lógicos
 docs: atualiza trilha
 ```

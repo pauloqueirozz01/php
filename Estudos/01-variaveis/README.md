@@ -1,6 +1,6 @@
-# 01 · Fundamentos do PHP
+# 01 · VARIÁVEIS
 
-Primeiro contato com a linguagem: como o PHP guarda valores, faz contas, compara coisas e recebe dados do terminal.
+Primeiro contato com a linguagem: como o PHP guarda valores em variáveis, faz contas, compara coisas e recebe dados do terminal.
 
 ## Ordem de estudo
 
@@ -71,5 +71,5 @@ $ano = $argv[1] ?? 2022; // ?? usa 2022 se nenhum argumento for passado
 
 ## Onde isso foi aplicado
 
-- Exercícios: [`Exercicios/01-fundamentos`](../../Exercicios/01-fundamentos/README.md)
+- Exercícios: [`Exercicios/01-variaveis`](../../Exercicios/01-variaveis/README.md)
 - Projeto: [`Projetos/01-screenmatch-cli`](../../Projetos/01-screenmatch-cli/README.md)

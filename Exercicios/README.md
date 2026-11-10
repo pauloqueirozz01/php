@@ -1,41 +1,156 @@
-# 🏋️ Exercícios
+# EXERCÍCIOS
 
-**Segundo passo de cada módulo:** praticar. Aqui ficam as listas de exercícios da Alura com as minhas soluções.
+**Segundo passo de cada tópico:** praticar. Os exercícios usam **as mesmas pastas de [`Estudos/`](../Estudos/README.md)**:
+`Exercicios/02-condicionais` pratica o que foi visto em `Estudos/02-condicionais`, e assim por diante.
+Aqui ficam o enunciado resumido, como rodar e, principalmente, **as decisões tomadas** durante a resolução.
 
-As pastas têm a **mesma numeração** de [`Estudos/`](../Estudos/README.md). Então `Exercicios/01-fundamentos` pratica o que foi visto em `Estudos/01-fundamentos`.
+> **Tente resolver sozinho antes** de abrir a minha solução. Existe mais de um jeito certo.
 
-## Como usar
+### TÓPICOS
+| # | Tópico | Teoria | Status |
+|---|---|---|---|
+| 01 | [Variáveis](01-variaveis/README.md) | [`Estudos/01-variaveis`](../Estudos/01-variaveis/README.md) | 🟡 |
+| 02 | [Condicionais](02-condicionais/README.md) | [`Estudos/02-condicionais`](../Estudos/02-condicionais/README.md) | 🟡 |
+| 03 | [Loops](03-loops/README.md) | [`Estudos/03-loops`](../Estudos/03-loops/README.md) | ⚪ |
+| 04 | [Funções](04-funcoes/README.md) | [`Estudos/04-funcoes`](../Estudos/04-funcoes/README.md) | ⚪ |
+| 05 | [Manipulação de arquivos](05-manipulacao-de-arquivos/README.md) | [`Estudos/05-manipulacao-de-arquivos`](../Estudos/05-manipulacao-de-arquivos/README.md) | ⚪ |
+| 06 | [Tratamento de erros](06-tratamento-de-erros/README.md) | [`Estudos/06-tratamento-de-erros`](../Estudos/06-tratamento-de-erros/README.md) | ⚪ |
 
-1. Leia o `README.md` do módulo: lá estão os **enunciados**.
-2. **Tente resolver sozinho antes** de abrir a minha solução.
-3. Compare. Existe mais de um jeito certo.
-4. Rode a solução:
-   ```bash
-   php Exercicios/01-fundamentos/01-nome-do-exercicio.php
-   ```
+### ÍNDICE DE EXERCÍCIOS
+| Exercício | Arquivo | O que pratica | Status |
+|---|---|---|---|
+| [MediaNotas](#medianotas) | `01-variaveis/MediaNotas.php` | Operadores aritméticos, interpolação e `if`/`elseif`/`else` (também listado em `02-condicionais`) | ✅ |
+| [Nome](#nome) | `01-variaveis/Nome.php` | Atribuição e impressão de variáveis | ⚪ |
+| [MetrosECentimetros](#metrosecentimetros) | `01-variaveis/MetrosECentimetros.php` | Conversão de unidades | ⚪ |
+| [Celsius&Fahrenheit](#celsiusfahrenheit) | `01-variaveis/Celsius&Fahrenheit.php` | Fórmula de conversão de temperatura | ⚪ |
+| [AnoBissexto](#anobissexto) | `01-variaveis/AnoBissexto.php` | Resto da divisão (`%`) e operadores lógicos | ⚪ |
+| [manipulandoDados](#manipulandodados) | `01-variaveis/manipulandoDados.php` | Variáveis do filme, média, lógicos e interpolação | 🟡 |
 
-## Módulos
+### COMO RODAR
+Pelo PhpStorm, abra o arquivo e use *Run*. Pelo terminal (na raiz do repositório):
+```bash
+php Exercicios/01-variaveis/MediaNotas.php
 
-| # | Módulo | Exercícios | Status |
-|---|--------|-----------|--------|
-| 01 | [Fundamentos](01-fundamentos/README.md) | — | ⚪ |
-
-## Padrão dos arquivos
-
-- Um arquivo por exercício, numerado: `01-media-de-notas.php`, `02-par-ou-impar.php`.
-- O arquivo começa com o enunciado em comentário:
-
-```php
-<?php
-
-/*
- * Exercício 01 — Média de notas
- * Fonte: Alura — <nome do curso>, aula <n>
- *
- * Enunciado:
- * Receba três notas pelo terminal e mostre a média.
- *
- * Como rodar:
- * php Exercicios/01-fundamentos/01-media-de-notas.php 7 8 9
- */
+# o & no nome do arquivo precisa de aspas no terminal
+php "Exercicios/01-variaveis/Celsius&Fahrenheit.php"
 ```
+
+---
+
+## MediaNotas
+**Arquivo:** `01-variaveis/MediaNotas.php`
+
+**Enunciado:** crie um programa em PHP que calcule a média de três notas e exiba o resultado.
+
+**Conceitos praticados:** variáveis `int` e `float`, operadores aritméticos, precedência com parênteses,
+interpolação de strings e `if`/`elseif`/`else`.
+
+**Saída:**
+```
+A média das notas 10, 8, 7.5 é: 8.5
+Aluno aprovado!
+```
+
+### Decisão: parênteses na soma antes da divisão
+`($nota1 + $nota2 + $nota3) / 3`. Sem os parênteses, a divisão tem precedência e só a última nota seria dividida por 3.
+
+### Decisão: ir além do enunciado e classificar o aluno
+O enunciado pede só a média, mas acrescentei uma situação final para praticar condicionais:
+
+| Média | Situação |
+|---|---|
+| `>= 7` | Aprovado |
+| `>= 5` e `< 7` | Recuperação |
+| `< 5` | Reprovado |
+
+### Próximos passos
+- [ ] Receber as notas pelo terminal com `$argv` em vez de deixar fixas no código
+- [ ] Formatar a média com duas casas decimais (`number_format($media, 2)`)
+- [ ] Simplificar o `elseif`: o `$media < 7` é redundante, porque o primeiro `if` já tratou `>= 7`
+
+---
+
+## Nome
+**Arquivo:** `01-variaveis/Nome.php`
+
+**Enunciado:** escreva um programa em PHP que exiba seu nome na tela.
+
+**Conceitos praticados:** atribuição de variável e `echo`.
+
+*(a resolver)*
+
+---
+
+## MetrosECentimetros
+**Arquivo:** `01-variaveis/MetrosECentimetros.php`
+
+**Enunciado:** elabore um programa em PHP que receba um valor em metros e converta para centímetros.
+
+**Conceitos praticados:** `$argv`, operadores aritméticos (`* 100`).
+
+*(a resolver)*
+
+---
+
+## Celsius&Fahrenheit
+**Arquivo:** `01-variaveis/Celsius&Fahrenheit.php`
+
+**Enunciado:** converter uma temperatura de Celsius para Fahrenheit (`F = C × 1,8 + 32`).
+
+**Conceitos praticados:** operadores aritméticos e precedência.
+
+*(a resolver)*
+
+---
+
+## AnoBissexto
+**Arquivo:** `01-variaveis/AnoBissexto.php`
+
+**Enunciado:** desenvolva um programa em PHP que verifique se um ano é bissexto ou não.
+
+**Conceitos praticados:** resto da divisão (`%`), `&&`, `||` e `if`/`else`.
+Regra: divisível por 4 **e** não divisível por 100, **ou** divisível por 400.
+
+*(a resolver)*
+
+---
+
+## manipulandoDados
+**Arquivo:** `01-variaveis/manipulandoDados.php`
+
+**Enunciado:** desafio da Alura aplicando os fundamentos ao ScreenMatch:
+1. Definir variáveis com informações do filme (nome, ano de lançamento, nota e se está incluído no plano).
+2. Usar soma e divisão para chegar à média de várias notas.
+3. Usar operadores lógicos para definir se o filme está incluído no plano.
+4. Usar concatenação e interpolação para formatar a exibição dos dados.
+
+**Conceitos praticados:** `$argv`, `??`, operadores aritméticos e lógicos, concatenação (`.`) e interpolação.
+
+### Decisão: nome do filme vindo de `$argv[1] ?? "Filme de Ação"`
+O nome pode ser passado ao rodar o script (`php manipulandoDados.php "Duna"`). Se nada for passado,
+o `??` usa um valor padrão em vez de gerar o aviso *Undefined array key 1*.
+
+### Próximos passos
+- [ ] Calcular a média de várias notas (passo 2)
+- [ ] Definir `$inclusoNoPlano` com operadores lógicos (passo 3)
+- [ ] Exibir os dados formatados (passo 4)
+- [ ] Remover o `echo "Digite o nome do filme"`: com `$argv` o nome é passado **antes** de rodar, o programa não espera digitação
+
+---
+
+<!--
+MODELO PARA NOVO EXERCÍCIO (copie o bloco abaixo, preencha e adicione uma linha no ÍNDICE)
+
+## NomeDoExercicio
+**Arquivo:** `pasta/NomeDoExercicio.php`
+
+**Enunciado:** resumo do que o exercício pede.
+
+**Conceitos praticados:** ...
+
+### Decisão: título curto da decisão
+O que foi feito, o que foi tentado antes (se houver) e por que essa escolha foi melhor.
+
+### Próximos passos
+- [ ] ...
+-->
