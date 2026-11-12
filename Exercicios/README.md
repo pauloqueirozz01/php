@@ -20,11 +20,12 @@ Aqui ficam o enunciado resumido, como rodar e, principalmente, **as decisões to
 | Exercício | Arquivo | O que pratica | Status |
 |---|---|---|---|
 | [MediaNotas](#medianotas) | `01-variaveis/MediaNotas.php` | Operadores aritméticos, interpolação e `if`/`elseif`/`else` (também listado em `02-condicionais`) | ✅ |
-| [Nome](#nome) | `01-variaveis/Nome.php` | Atribuição e impressão de variáveis | ⚪ |
+| [Nome](#nome) | `01-variaveis/Nome.php` | Atribuição e impressão de variáveis | ✅ |
 | [MetrosECentimetros](#metrosecentimetros) | `01-variaveis/MetrosECentimetros.php` | Conversão de unidades | ⚪ |
 | [Celsius&Fahrenheit](#celsiusfahrenheit) | `01-variaveis/Celsius&Fahrenheit.php` | Fórmula de conversão de temperatura | ⚪ |
 | [AnoBissexto](#anobissexto) | `01-variaveis/AnoBissexto.php` | Resto da divisão (`%`) e operadores lógicos | ⚪ |
 | [manipulandoDados](#manipulandodados) | `01-variaveis/manipulandoDados.php` | Variáveis do filme, média, lógicos e interpolação | 🟡 |
+| [Lista de loops](03-loops/README.md) | `03-loops/loop1.php` a `loop10.php` | `for`, `while`, contadores, acumuladores e sentinelas | 🟡 |
 
 ### COMO RODAR
 Pelo PhpStorm, abra o arquivo e use *Run*. Pelo terminal (na raiz do repositório):
@@ -77,7 +78,7 @@ O enunciado pede só a média, mas acrescentei uma situação final para pratica
 
 **Conceitos praticados:** atribuição de variável e `echo`.
 
-*(a resolver)*
+*(resolução já iniciada no arquivo)*
 
 ---
 
@@ -88,7 +89,8 @@ O enunciado pede só a média, mas acrescentei uma situação final para pratica
 
 **Conceitos praticados:** `$argv`, operadores aritméticos (`* 100`).
 
-*(a resolver)*
+O arquivo contém objetivo, relação entre as unidades, roteiro de raciocínio,
+exemplos, requisitos e desafio opcional, sem entregar a solução.
 
 ---
 
@@ -99,7 +101,8 @@ O enunciado pede só a média, mas acrescentei uma situação final para pratica
 
 **Conceitos praticados:** operadores aritméticos e precedência.
 
-*(a resolver)*
+O arquivo explica a fórmula, a ordem das operações e casos de teste úteis,
+incluindo temperaturas negativas, sem entregar a solução.
 
 ---
 
@@ -111,7 +114,18 @@ O enunciado pede só a média, mas acrescentei uma situação final para pratica
 **Conceitos praticados:** resto da divisão (`%`), `&&`, `||` e `if`/`else`.
 Regra: divisível por 4 **e** não divisível por 100, **ou** divisível por 400.
 
-*(a resolver)*
+O arquivo divide a regra em perguntas booleanas e propõe testes para anos comuns,
+divisíveis por 4, por 100 e por 400, sem entregar a solução.
+
+---
+
+## Lista de loops
+**Arquivos:** `03-loops/loop1.php` a `03-loops/loop10.php`
+
+O primeiro exercício é o exemplo resolvido de números ímpares. Os demais formam
+uma progressão com quatro exercícios de `for` e cinco de `while`. Cada enunciado
+explica por que aquela estrutura é adequada e orienta o raciocínio sem fornecer
+o código pronto. Veja a [lista completa e o guia de escolha](03-loops/README.md).
 
 ---
 
